@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <a href="casa.component.html">
+    <button class="back-button">🐧​ Volver</button>
+  </a>
+  <div class="form-container">
+    <h2>Formulario para saber qué tan hombre de cultura eres y "saber de tu"</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">TU Nombre:</label>
+          <input type="text" id="firstName" formControlName="firstName" placeholder="Ingresa tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">TUS Apellidos:</label>
+          <input type="text" id="lastName" formControlName="lastName" placeholder="Ingresa tus apellidos" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">TU Correo Electrónico:</label>
+          <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo electrónico" />
+        </div>
+        <div class="form-group">
+          <label for="cedula">TU Cédula:</label>
+          <input type="text" id="cedula" formControlName="cedula" placeholder="Ingresa tu cédula" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label for="direccion">TU Dirección:</label>
+          <input type="text" id="direccion" formControlName="direccion" placeholder="Ingresa tu dirección" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gender">TU Género:</label>
+          <select id="gender" formControlName="gender">
+            <option value="">Seleccione una opción</option>
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+            <option value="other">¿Eres de otro mundo?</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Mensaje:</label>
+          <textarea
+            id="message"
+            rows="4"
+            formControlName="message"
+            placeholder="Escribeme qué es lo que piensas y te respondo"
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" formControlName="agree" />
+          Acepto los términos y condiciones
+        </label>
+      </div>
+      <div class="form-group submit-group">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
